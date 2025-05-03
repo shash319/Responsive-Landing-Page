@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Landing Page</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    header {
+      background: rgb(255, 208, 0);
+      color: #fff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0px 120px;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('https://via.placeholder.com/1500x700') no-repeat center center/cover;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+    }
+
+    /* Features Section */
+    .features {
+      padding: 50px 20px;
+      background: #f9f9f9;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .feature {
+      background: #d2a4e6;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .feature h3 {
+      margin-bottom: 10px;
+      color: rgb(204, 255, 0);;
+    }
+
+    .feature p {
+      margin-bottom: 10px;
+      color: #fff;;
+    }
+    /* Footer */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 0.9em;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        background: rgb(255, 208, 0);;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        display: none;
+      }
+
+      nav ul.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Blink It</div>
+    <nav>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul id="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- <section class="hero">
+    <div>
+      <h1>Welcome to Our Website</h1>
+      <p>We build amazing digital experiences for you!</p>
+    </div>
+  </section> -->
+
+  <img src="./coder.jpg" alt="">
+  <section class="features">
+    <div class="feature">
+      <h3>Fast Performance</h3>
+      <p>Experience blazing fast speeds and smooth interactions.</p>
+    </div>
+    <div class="feature">
+      <h3>Responsive Design</h3>
+      <p>Our layouts adapt perfectly to all devices.</p>
+    </div>
+    <div class="feature">
+      <h3>Easy Customization</h3>
+      <p>Make it yours with simple and flexible options.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 MyWebsite | All Rights Reserved
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('active');
+    }
+  </script>
+
+</body>
+</html>
